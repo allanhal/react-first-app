@@ -1,0 +1,10 @@
+.fundo-verde {
+  background-color: green;
+}
+
+.busca-perfil-carrinho {
+  display: flex;
+  justify-content: center;
+  border: 1px solid black;
+  gap: 20px;
+}
