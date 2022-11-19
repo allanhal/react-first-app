@@ -3,12 +3,8 @@ import { useEffect, useState } from "react";
 // arrayUseState[1] - setContador - MÉTODO/MODIFICA O ESTADO
 // TODA VEZ QUE EU MODIFICO O ESTADO DE UMA VARIAVEL
 // NO MEU COMPONENTE, ELE (O COMPONENTE) É RE-RENDERIZADO
-const Banner = () => {
-  const mensagens = [
-    "Promocao 1,99",
-    "Frete Gratis para todo o brasil, menos metade do brasil",
-    "Envio em até 2hrs",
-  ];
+const Banner = (props) => {
+  const mensagens = props.usuario.hobby;
   // useState - componente - guardar estado de uma variavel
   // useEffect - componente - realizar algum código, caso alguma variavel seja modificada
   // useContext - vários componentes - "useState" global
