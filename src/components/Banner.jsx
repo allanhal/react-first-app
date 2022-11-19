@@ -4,18 +4,33 @@ let Banner = () => {
   // arrayUseState[1] - setIsSabado - MÉTODO/MODIFICA O ESTADO
   // TODA VEZ QUE EU MODIFICO O ESTADO DE UMA VARIAVEL
   // NO MEU COMPONENTE, ELE (O COMPONENTE) É RE-RENDERIZADO
-  let [isSabado, setIsSabado] = useState();
-  function esquerda() {
-    setIsSabado(false);
-  }
-  function direita() {
-    setIsSabado(true);
-  }
+  const mensagens = [
+    "Promocao 1,99",
+    "Frete Gratis para todo o brasil, menos metade do brasil",
+    "Envio em até 2hrs",
+  ];
+  let [contador, setContador] = useState(0);
   return (
     <div>
-      <button onClick={esquerda}>Esquerda</button>
-      <p>{isSabado ? "verdadeiro" : "falso"}</p>
-      <button onClick={direita}>Direita</button>
+      <button
+        onClick={() =>
+          contador === 0
+            ? setContador(mensagens.length - 1)
+            : setContador(contador - 1)
+        }
+      >
+        diminuir
+      </button>
+      <p>{mensagens[contador]}</p>
+      <button
+        onClick={() =>
+          contador === mensagens.length - 1
+            ? setContador(0)
+            : setContador(contador + 1)
+        }
+      >
+        aumentar
+      </button>
     </div>
   );
 };
