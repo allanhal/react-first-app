@@ -8,8 +8,8 @@ function App() {
     <div>
       <div className="header">
         <Banner />
-        <Institucional />
-        <BuscaPerfilCarrinho />
+        {/* <Institucional /> */}
+        {/* <BuscaPerfilCarrinho /> */}
       </div>
     </div>
   );
